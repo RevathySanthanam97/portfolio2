@@ -75,7 +75,7 @@ nav {
   padding: 5px 10px;
   border-radius: 100px;
   position: fixed;
-  right: 40px;
+  right: calc(10vh);
   z-index: 10;
 }
 li {
@@ -173,10 +173,9 @@ header {
 .link {
   width: 13px;
 }
-.projectContainer {
+.projectContainer > div {
   background: linear-gradient(to right, #0c0055 75%, var(--main-bg-color) 25%);
 }
-
 .projectContainer .mainContainer {
   height: 90vh;
 }
@@ -211,6 +210,17 @@ header {
   color: #a7a7a7;
   opacity: 0.3;
 }
+.project2 .projectName::before {
+  content: "02";
+}
+
+.project3 .projectName::before {
+  content: "03";
+}
+
+.project4 .projectName::before {
+  content: "04";
+}
 .projectImage {
   background-image: url(./media/images/dashboard.jpeg);
   background-repeat: no-repeat;
@@ -218,4 +228,56 @@ header {
   width: 480px;
   height: 300px;
   border-radius: 20px;
+}
+.skillsContainer {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.skillsList {
+  display: flex;
+}
+.skillsContainer .skillsList li {
+  padding: 7px 10px 7px 13px;
+  margin-right: 20px;
+  border-radius: 30px;
+  font: 15px "Poppins-Regular";
+  letter-spacing: 1px;
+  background-color: #2ca7c9;
+}
+.skillsContainer .skillsList li img {
+  width: 15px;
+  height: 15px;
+}
+.skillsContainer li:nth-child(1) {
+  background-color: #72290a;
+}
+.skillsContainer li:nth-child(3) {
+  background-color: #7c5900;
+}
+.skillsContainer li:nth-child(4) {
+  background-color: #236aa3;
+}
+.skillsContainer h2 {
+  font: 30px "Poppins-ExtraBold";
+  letter-spacing: 1px;
+}
+.skillsContainer > p {
+  margin: 0px 0px 40px 0px;
+}
+.experience {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  margin-top: 20px;
+}
+.experience > div {
+  background-color: var(--support-color2);
+  border-radius: 20px;
+  padding: 2rem 1rem;
+  margin: 1rem 2rem 1rem 0rem;
+  text-align: center;
+  flex: 0 0 350px;
+}
+.experience > div h3 {
+  margin: 30px 0px;
 }
