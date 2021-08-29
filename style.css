@@ -1,0 +1,221 @@
+/* reset defaults */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+/* import fonts */
+@font-face {
+  font-family: Poppins-Regular;
+  src: url(./media/fonts/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: Poppins-Light;
+  src: url(./media/fonts/Poppins-Light.ttf);
+}
+@font-face {
+  font-family: Poppins-Medium;
+  src: url(./media/fonts/Poppins-Medium.ttf);
+}
+@font-face {
+  font-family: Poppins-Bold;
+  src: url(./media/fonts/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url(./media/fonts/Poppins-SemiBold.ttf);
+}
+@font-face {
+  font-family: Poppins-ExtraBold;
+  src: url(./media/fonts/Poppins-ExtraBold.ttf);
+}
+/* webpage style */
+:root {
+  --main-bg-color: #070110;
+  --main-font-color: #ffffff;
+  --support-color1: #1d9873;
+  --support-color2: #101426;
+}
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-font-color);
+  font-family: Poppins-Regular;
+}
+a {
+  color: var(--main-font-color);
+  text-decoration: none;
+}
+.portfolioContainer {
+  position: relative;
+}
+.mainContainer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* fixed nav  */
+.navBar {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logoSect {
+  font: 30px "Poppins-ExtraBold";
+  color: var(--support-color1);
+}
+.logoSect span {
+  position: relative;
+  top: 14px;
+  color: var(--main-font-color);
+}
+nav {
+  display: flex;
+  background-color: var(--support-color2);
+  padding: 5px 10px;
+  border-radius: 100px;
+  position: fixed;
+  right: 40px;
+  z-index: 10;
+}
+li {
+  list-style-type: none;
+  padding: 5px 10px;
+  border-radius: 100px;
+  font: 15px/15px "Poppins-SemiBold";
+}
+li span.dot {
+  background-color: var(--support-color1);
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  border-radius: 50%;
+}
+li.selected {
+  background-color: var(--main-bg-color);
+}
+/* fixed nav  */
+header {
+  place-items: center start;
+  width: 100%;
+  height: 80vh;
+  display: grid;
+  margin-top: 10vh;
+}
+.homeContent {
+  display: flex;
+  position: relative;
+}
+.homeContent::before {
+  content: "Front End Engineer Javascript Developer";
+  word-break: break-all;
+  position: absolute;
+  top: -54px;
+  left: -65px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  font: 100px "Poppins-ExtraBold";
+  letter-spacing: 1px;
+  color: #141217;
+  opacity: 0.5;
+  text-transform: uppercase;
+  place-content: center start;
+  display: grid;
+}
+.homeContent .personalDetails {
+  padding: 30px 30px 15px 30px;
+  background-color: var(--support-color2);
+  border-radius: 10px;
+  margin-left: 20px;
+}
+.homeContent .contacts {
+  display: flex;
+  margin: 30px 0px 0px 0px;
+}
+.homeContent svg {
+  text-align: center;
+  width: 100%;
+}
+.homeContent .contacts img {
+  width: 20px;
+  height: 20px;
+}
+.homeContent .contacts p {
+  padding-left: 10px;
+  font: 13px/20px "Poppins-Medium";
+  letter-spacing: 1px;
+}
+.homeContent .gitlogo {
+  margin-left: 20px;
+}
+.homeContent .greetingText {
+  font: 30px/40px "Poppins-Regular";
+}
+.homeContent h2 {
+  font: 50px/60px "Poppins-ExtraBold";
+  letter-spacing: 1px;
+}
+.homeContent .detailsCopy {
+  font: 20px/30px "Poppins-Light";
+  width: 70%;
+  margin: 20px 0px;
+}
+.homeContent .navigations button {
+  background-color: var(--support-color1);
+  padding: 10px 20px;
+  border-radius: 100px;
+  border: none;
+  outline: none;
+  margin-right: 30px;
+  font: 15px "Poppins-SemiBold";
+}
+.link {
+  width: 13px;
+}
+.projectContainer {
+  background: linear-gradient(to right, #0c0055 75%, var(--main-bg-color) 25%);
+}
+
+.projectContainer .mainContainer {
+  height: 90vh;
+}
+.project {
+  place-content: center start;
+  display: grid;
+  height: 100%;
+  padding-right: 30px;
+  grid-template-columns: 60% auto;
+}
+.projectDetails {
+  place-content: center;
+  display: grid;
+}
+.projectDetails > * {
+  margin: 0px 0px 15px 0px;
+  width: 70%;
+}
+.projectName span {
+  border: 1px solid var(--support-color1);
+  padding: 0px 10px;
+}
+.projectName {
+  position: relative;
+}
+.projectName::before {
+  content: "01";
+  position: absolute;
+  top: -90px;
+  left: 0px;
+  font: 120px "Poppins-SemiBold";
+  color: #a7a7a7;
+  opacity: 0.3;
+}
+.projectImage {
+  background-image: url(./media/images/dashboard.jpeg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 480px;
+  height: 300px;
+  border-radius: 20px;
+}
